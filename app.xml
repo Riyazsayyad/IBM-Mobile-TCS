@@ -4951,9 +4951,12 @@
                 <box direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448">
                   <smart-input label="Description" rows="1" theme="dark" input-kind="LONGALN" value="{dsWoedit.item.description}" id="k2_mb"/>
                 </box>
-              <!-- 
-                Riyaz test code below 
-              -->
+              <!-- Riyaz Customization Starts Here.-->
+              <box direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X">
+                  <smart-input label="Custom Description" rows="1" theme="dark" input-kind="LONGALN" value="{dsWoedit.item.description}" id="k2_mbX"/>
+                </box>
+                <!-- Riyaz Customization Ends Here.-->
+  
                 <border-layout fill-parent="true" padding="false" top-border="false" id="gvknr">
                   <top id="j7qda">
                     <label label="Long description" id="bgk69"/>
