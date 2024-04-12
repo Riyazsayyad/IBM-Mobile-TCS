@@ -4883,7 +4883,7 @@
             <attribute name="assetlocpriority" id="zkvpy"/>
             <attribute name="glaccount" id="mmkrk"/>
             <!-- Field added by riyaz -->
-            <attribute name="RIYAZ" id="riyazB"/>
+            <attribute name="riyaz" id="riyazB"/>
             <!-- Field added by riyaz -->
           </schema>
         </json-datasource>
@@ -4908,7 +4908,7 @@
             <attribute name="reportedby" id="gzqjj"/>
             <attribute name="glaccount" id="y2ep_"/>
             <!-- Field added by riyaz -->
-            <attribute name="RIYAZ" id="riyazA"/>
+            <attribute name="riyaz" id="riyazA"/>
             <!-- Field added by riyaz -->
   
           </schema>
@@ -4960,7 +4960,7 @@
                 </box>
               <!-- Riyaz Customization Starts Here.-->
               <box direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X">
-                  <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction()" input-kind="LONGALN" value="{dsWoedit.item.RIYAZ}" id="k2_mbX"/>
+                  <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction" input-kind="LONGALN" value="{dsWoedit.item.riyaz}" id="k2_mbX"/>
                 </box>
                 <!-- Riyaz Customization Ends Here.-->
   
