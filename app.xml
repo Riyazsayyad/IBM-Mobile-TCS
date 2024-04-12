@@ -4882,6 +4882,9 @@
             <attribute name="failurecode" id="ebnn_"/>
             <attribute name="assetlocpriority" id="zkvpy"/>
             <attribute name="glaccount" id="mmkrk"/>
+            <!-- Field added by riyaz -->
+            <attribute name="RIYAZ" id="riyazB"/>
+            <!-- Field added by riyaz -->
           </schema>
         </json-datasource>
         <maximo-datasource id="newWorkOrderds" id-attribute="workorderid" where="wonum=&quot;0&quot;" object-structure="mxapiwodetail">
@@ -4957,7 +4960,7 @@
                 </box>
               <!-- Riyaz Customization Starts Here.-->
               <box direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X">
-                  <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" input-kind="LONGALN" value="{dsWoedit.item.description}" id="k2_mbX"/>
+                  <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction()" input-kind="LONGALN" value="{dsWoedit.item.RIYAZ}" id="k2_mbX"/>
                 </box>
                 <!-- Riyaz Customization Ends Here.-->
   
