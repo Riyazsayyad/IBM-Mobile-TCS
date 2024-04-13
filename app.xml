@@ -4959,8 +4959,8 @@
                 <smart-input label="Description" rows="1" theme="dark" input-kind="LONGALN" value="{dsWoedit.item.description}" id="k2_mb"/>
               </box>
             <!-- Riyaz Customization Starts Here.-->
-            <box  direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X" hidden="{dsWoedit.item.description=='Hide below'}">
-                <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction" input-kind="LONGALN" value="{dsWoedit.item.riyaz}" id="k2_mbX"/>
+            <box  direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X" hidden="{dsWoedit.item.description=='Hide below'}" >
+                <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction" input-kind="LONGALN" value="{dsWoedit.item.riyaz}" id="k2_mbX" readonly="{dsWoedit.item.description=='Readonly below'}" />
               </box>
               <!-- Riyaz Customization Ends Here.-->
 
