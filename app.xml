@@ -4864,6 +4864,7 @@
       <json-datasource id="dsWoedit" src="{[]}" selection-mode="none" id-attribute="workorderid" auto-save="false">
         <schema id="kk3ex">
           <attribute name="workorderid" unique-id="true" id="rbamw"/>
+          <attribute name="ownergroup" id="bk9b4"/>
           <attribute name="wonum" id="b3aar"/>
           <attribute name="description" id="jzyej"/>
           <attribute name="description_longdescription" id="wx24_"/>
@@ -4883,7 +4884,7 @@
           <attribute name="assetlocpriority" id="zkvpy"/>
           <attribute name="glaccount" id="mmkrk"/>
           <!-- Field added by riyaz -->
-          <attribute name="riyaz" id="riyazB"/>
+          <attribute name="metadata" id="riyazb"/>
           <!-- Field added by riyaz -->
         </schema>
       </json-datasource>
@@ -4908,12 +4909,15 @@
           <attribute name="reportedby" id="gzqjj"/>
           <attribute name="glaccount" id="y2ep_"/>
           <!-- Field added by riyaz -->
-          <attribute name="riyaz" id="riyazA"/>
+          <attribute name="metadata" id="riyaza"/>
           <!-- Field added by riyaz -->
 
         </schema>
       </maximo-datasource>
       <dialogs id="d_4kb">
+        <!-- Added lookup below -->
+        <lookup id="ownergroupLookup" datasource="persongroupLookupDS" border="true" show-count="true" show-search="true" tight="true" lookup-attributes="{['persongroup', 'description']}" on-item-click="selectOwnerGroup" height="400" width="60" lookup-heading="Owner Group"/>
+        <!-- custom lookup end -->
         <dialog id="woDetailsEditDialog" title="Long description" size="lg" passive="true" on-close-action="onCloseRichTextDialog">
           <rich-text-editor content="{dsWoedit.item.description_longdescription}" toolbar="true" menubar="false" statusbar="false" id="wg72g" on-editor-change="onEditorChange" on-save="onEditorSave"/>
         </dialog>
@@ -4959,10 +4963,10 @@
                 <smart-input label="Description" rows="1" theme="dark" input-kind="LONGALN" value="{dsWoedit.item.description}" id="k2_mb"/>
               </box>
             <!-- Riyaz Customization Starts Here.-->
-            <box  direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X" hidden="{dsWoedit.item.description=='Hide below'}" >
-                <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction" input-kind="LONGALN" value="{dsWoedit.item.riyaz}" id="k2_mbX" readonly="{dsWoedit.item.description=='Readonly below'}" />
-              </box>
-              <!-- Riyaz Customization Ends Here.-->
+            <box  direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="w_448X" hidden="{dsWoedit.item.description=='Hide'}" >
+                <smart-input label="Custom Description : Riyaz" rows="1" theme="dark" on-blur="firstFunction" input-kind="LONGALN" value="{dsWoedit.item.metadata}" id="k2_mbX" readonly="{dsWoedit.item.description=='Readonly'}" />
+            </box>
+            <!-- Riyaz Customization Ends Here.-->
 
               <border-layout fill-parent="true" padding="false" top-border="false" id="gvknr">
                 <top id="j7qda">
@@ -5010,6 +5014,16 @@
             </end>
           </border-layout>
         </box>
+
+        <!-- Lookup box below-->
+        <box padding-top="{app.state.screen.size === 'sm' || app.state.screen.size === 'md' ? '1' : '.5'}" id="e34k91"/>
+
+        <box direction="column" background-color="field-01" padding="{app.state.screen.size === 'sm' || app.state.screen.size === 'md' ? 0 : 0.5}" id="z7znb1">
+
+          <smart-input label="Owner Group" theme="dark" placeholder="Owner Group" value="{dsWoedit.item.ownergroup}" select-lookup-attribute="persongroup" lookup="ownergroupLookup" enable-lookup-buttongroup="true" id="nx9qa"/>
+
+        </box>
+        <!-- ended custom lookup box -->
         <border-layout padding="{app.state.screen.size === 'sm' || app.state.screen.size === 'md' ? 'false' : 'true'}" fill-parent="true" width="100%" id="nqgrp">
           <top id="q636m">
             <box direction="row" id="w73n5">
