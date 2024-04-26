@@ -5058,7 +5058,27 @@
             </start>
           </border-layout>
         </box>
+      <!-- Riyaz Custom Section : START-->
+      <box  direction="row" background-color="field-01" padding="{app.state.screen.size === 'sm' || app.state.screen.size === 'md' ? 0 : 0.5}"  id="riyaz_x1">
+        <label label="Custom Section : RIYAZ" theme="20-regular" wrap="true" id="riyaz_y12"/>
+        <border-layout padding="true" background-color="field-01" width="100%" id="riyaz_x10">
+          <box direction="column" background-color="field-01" padding="{app.state.screen.size === 'sm' || app.state.screen.size === 'md' ? 0 : 0.5}" id="v4am_riyaz">
+            <border-layout padding="true" background-color="field-01" width="100%" id="x94ab_riyaz">
+              <start horizontal-overflow="hidden" width="100" id="z6dpb_riyaz">
+                <box direction="row" children-sizes="100" fill-parent="true" padding-bottom="0.5" fill-child="true" id="agbqy_riyaz">
+                  <smart-input label="Location" theme="dark" placeholder="Location number" value="{dsWoedit.item.locationnum}" readonly="{!wpEditSettingDS.item.editloc &amp;&amp; !page.params.followup}" enable-lookup-buttongroup="true" select-lookup-attribute="location" id="av_qz_riyaz" on-blur="findAsset" on-change="editAssetsLocation">
+                    <button slot="button-group" kind="secondary" label="Search" icon="Carbon:search" lookup="openCreadWOLocationLookup" id="andxk_riyaz"/>
+                    <barcode-button slot="button-group" icon="Maximo:scan" on-scan="handleLocationBarcodeScan" timeout="30" label="Scan" id="qkdr6_riyaz"/>
+                  </smart-input>
+                </box>
+              </start>
+            </border-layout>
+          </box>
+      </border-layout>
+      </box>
+      <!-- Riyaz Custom Section : END-->
       </panel>
+
     </page>
     <page id="createwo" title="Create work order" path="/createwo" comp-group-valid-chg="{page.state.cgvc=event}" controller="WorkOrderCreateController">
       <states id="wpzjr">
